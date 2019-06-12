@@ -82,7 +82,7 @@ public class OrderServiceImplTestWithPowerMock {
 		// Verification
 		Mockito.verify(mockOrderDao).findById(ORDER_ID);
 		
-		PowerMockito.verifyStatic();
+		PowerMockito.verifyStatic(null);
 		ArgumentCaptor<OrderMessage> orderMessageCaptor = 
 				ArgumentCaptor.forClass(OrderMessage.class);
 		
